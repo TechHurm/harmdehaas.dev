@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harm. | Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="rain-container" id="rainContainer"></div>
+
+    <div class="scroll-wrapper">
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">harm.</a>
+                <div class="nav-links">
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="travel.html">Travel</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="hero">
+                <p class="intro">Hello! I'm Harm.</p>
+                <h1>Frontend Dev with next level of <span class="creative-text">Creativity</span></h1>
+                <div class="cta-section">
+                    <a href="mailto:harmdehaas@gmail.com" class="cta-button">Let's Talk</a>
+                </div>
+                <p class="subtitle">A frontend developer focused on building effective web sites & apps.</p>
+            </div>
+
+            <div class="section-spacer"></div>
+
+            <div class="dark-section">
+                <div class="dark-content">
+                    <h2>Your business needs a professional looking website</h2>
+                    <p>Let's create something amazing together</p>
+                </div>
+            </div>
+
+            <section class="works-section">
+                <div class="section-header">
+                    <h2>Selected work</h2>
+                    <a href="projects.html" class="view-all">View All Works</a>
+                </div>
+                <div class="I can code this:">
+                    <div class="project-image">
+                        <!-- Replace with your project screenshot -->
+                        <img src="Screenshot 2024-11-06 164205.png" alt="Featured Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Chrono Watches</h3>
+                        <p>Landing Page</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h3>A frontend developer dedicated to making a world better place.</h3>
+                <p>Focus on growing your business, and let me handle your online presence to help you stand out from the competition.</p>
+            </section>
+
+            <section class="contact-section">
+                <h3>Have an idea?</h3>
+                <div class="contact-content">
+                    <h4>Let's rock with me</h4>
+                    <a href="mailto:harmdehaas@gmail.com">harmdehaas@gmail.com</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <a href="index.html" class="logo">harm.</a>
+                    <p class="quote">"The genius thing we did was, we didn't give up" - Jay Z</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/harmdehaas_" target="_blank">Instagram</a>
+                    </div>
+                    <div class="footer-email">
+                        <a href="mailto:harmdehaas@gmail.com">harmdehaas@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.scroll-wrapper');
+            const darkSection = document.querySelector('.dark-section');
+            const darkContent = document.querySelector('.dark-content');
+            const rainContainer = document.getElementById('rainContainer');
+
+            // Create raindrops
+            function createRaindrops() {
+                const numberOfDrops = 100;
+                rainContainer.innerHTML = '';
+
+                for (let i = 0; i < numberOfDrops; i++) {
+                    const drop = document.createElement('div');
+                    drop.className = 'raindrop';
+                    
+                    // Random positioning and animation
+                    const left = Math.random() * 100;
+                    const duration = Math.random() * 1 + 0.5; // 0.5 to 1.5 seconds
+                    const delay = Math.random() * 2; // 0 to 2 seconds delay
+                    const height = Math.random() * 100 + 100; // 100px to 200px height
+
+                    drop.style.left = `${left}%`;
+                    drop.style.height = `${height}px`;
+                    drop.style.animationDuration = `${duration}s`;
+                    drop.style.animationDelay = `${delay}s`;
+
+                    rainContainer.appendChild(drop);
+                }
+            }
+
+            // Create initial raindrops
+            createRaindrops();
+
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                const triggerPoint = window.innerHeight * 0.3;
+
+                if (scrollPosition > triggerPoint) {
+                    wrapper.classList.add('dark-mode');
+                    darkContent.classList.add('fade-in');
+                    rainContainer.classList.add('active');
+                } else {
+                    wrapper.classList.remove('dark-mode');
+                    darkContent.classList.remove('fade-in');
+                    rainContainer.classList.remove('active');
+                }
+            });
+
+            // Recreate raindrops periodically to keep the animation fresh
+            setInterval(createRaindrops, 10000);
+        });
+    </script>
+</body>
+</html> 

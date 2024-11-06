@@ -1,0 +1,578 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #000;
+    --text-color: #1a1a1a;
+    --bg-color: #fff;
+    --accent-color: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter Tight', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+/* Add styles for the creative text */
+.creative-text {
+    display: inline-block;
+    color: #666;
+    transform: rotate(-5deg);
+    font-style: italic;
+}
+
+/* Navigation */
+nav {
+    padding: 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: var(--bg-color);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.cta-section {
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+}
+
+/* Works Section */
+.works-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+}
+
+.view-all {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.featured-project {
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.featured-project:hover {
+    opacity: 0.9;
+}
+
+.featured-project .project-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.featured-project .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-project:hover .project-image img {
+    transform: scale(1.02);
+}
+
+.featured-project .project-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-project .project-info p {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-section p {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Insights Section */
+.insights-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.insight-card {
+    cursor: pointer;
+}
+
+.insight-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.insight-card p {
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 2rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    max-width: 400px;
+}
+
+.quote {
+    color: var(--accent-color);
+    margin-top: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.social-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Add this to your existing styles.css */
+
+.construction-page {
+    padding: 12rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.construction-page h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.construction-page p {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Add these styles to your existing styles.css */
+
+.projects-page {
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-page h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.project-showcase {
+    margin-top: 2rem;
+}
+
+.project-item {
+    margin-bottom: 4rem;
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.02);
+}
+
+.project-details {
+    padding: 2rem;
+}
+
+.project-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-type {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-description {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.project-link:hover {
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-details {
+        padding: 1.5rem;
+    }
+
+    .project-details h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Add these new styles to your existing CSS */
+
+.scroll-wrapper {
+    transition: background-color 1s ease, color 1s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+    transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+.dark-mode nav {
+    background-color: #000;
+}
+
+.dark-mode .logo,
+.dark-mode .nav-links a {
+    color: #fff;
+}
+
+.dark-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    margin: 4rem 0;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.dark-content {
+    text-align: center;
+    opacity: 1;
+}
+
+.dark-content.fade-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dark-content h2 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 900px;
+}
+
+.dark-content p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.dark-mode .dark-content h2 {
+    color: #fff;
+}
+
+.dark-mode .dark-content p {
+    color: #999;
+}
+
+/* Update existing styles for dark mode compatibility */
+.dark-mode .cta-button {
+    background: #fff;
+    color: #000;
+}
+
+.dark-mode .view-all,
+.dark-mode .about-section p,
+.dark-mode .contact-content a,
+.dark-mode .social-links a,
+.dark-mode .quote {
+    color: #999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dark-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .dark-content p {
+        font-size: 1.25rem;
+    }
+}
+
+/* Add these new styles for the dripping animation */
+.rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+.rain-container.active {
+    opacity: 1;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(transparent, #000);
+    animation: rain linear infinite;
+}
+
+.dark-mode .raindrop {
+    background: linear-gradient(transparent, #fff);
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Add this to your existing styles */
+
+.section-spacer {
+    height: 40vh;
+    width: 100%;
+}
+
+/* Add these styles for the footer email */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-email a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-email a:hover {
+    color: var(--primary-color);
+}
+
+.dark-mode .footer-email a:hover {
+    color: #fff;
+}
