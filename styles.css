@@ -100,6 +100,10 @@ nav {
     transition: opacity 0.3s;
 }
 
+.cta-button:hover {
+    opacity: 0.9;
+}
+
 .subtitle {
     font-size: 1.25rem;
     color: var(--accent-color);
@@ -575,4 +579,116 @@ footer {
 
 .dark-mode .footer-email a:hover {
     color: #fff;
+}
+
+/* Add these styles for the logo image */
+.logo-image {
+    height: 40px; /* Adjust the height as needed */
+    width: 40px; /* Ensure width matches height for a perfect circle */
+    border-radius: 50%; /* Makes the image round */
+    vertical-align: middle;
+    object-fit: cover; /* Ensures the image covers the entire circle */
+}
+
+/* Prices page styles */
+.prices-page {
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prices-page h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.price-intro {
+    margin-bottom: 4rem;
+    max-width: 800px;
+}
+
+.highlight-text {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+
+.value-prop {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    line-height: 1.6;
+}
+
+.benefits-section {
+    margin: 4rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-item {
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-item p {
+    color: var(--accent-color);
+}
+
+.cta-section {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 4rem 2rem;
+    background: #f8f8f8;
+    border-radius: 1rem;
+}
+
+.cta-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dark mode compatibility */
+.dark-mode .benefit-item,
+.dark-mode .cta-section {
+    background: #1a1a1a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .prices-page h1 {
+        font-size: 2.5rem;
+    }
+    
+    .highlight-text {
+        font-size: 1.5rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
 }
